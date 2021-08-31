@@ -11,11 +11,12 @@ We have defined a function, filteredArray, which takes arr, a nested array
 function filteredArray(arr,elem){
     let newArr = [];
     for (let i=0; i < arr.length; i++ ){
-        for (let j = 0; j < arr[i].length; j++){
             if (arr[i].indexOf(elem)<0){
                 newArr.push(arr[i]);
-            };
         };
     };
     return newArr
 }
+
+
+
