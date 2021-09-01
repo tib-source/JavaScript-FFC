@@ -56,4 +56,11 @@ function confirmEnding(str, ending){
 }
 
 
-//
+//Repeat a String 
+function repeatStringNumTimes(str, num){
+    let stringRepeated = [ ]
+    for (let i = 0; i < num; i++){
+        stringRepeated.push(str)
+    }
+    return stringRepeated.join("")
+}
