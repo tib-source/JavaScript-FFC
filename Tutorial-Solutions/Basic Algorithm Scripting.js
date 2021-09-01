@@ -131,6 +131,16 @@ function frankenSplice(arr1, arr2, n){
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
 
+// Falsy Bouncer 
+
+function bouncer(arr){
+    let falsy = [false, null, 0, '', undefined, NaN]
+    let filteredArr  = arr.filter( item => {return falsy.includes(item)? false: true})
+    return filteredArr
+  }
+  
+  bouncer([7, "ate", "", false, 9]);
+
 
 
 
