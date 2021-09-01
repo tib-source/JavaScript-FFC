@@ -156,6 +156,23 @@ function getIndexToIns(arr, num) {
   
   getIndexToIns([3, 10, 5], 3);
 
+// Mutations - Return true if the string in the first element of the array
+// contains all of the letters of the string in the second element of the array.
+
+
+
+function mutation(arr) {
+    let mainString = arr[0].toLowerCase().split("")
+    let test = arr[1].toLowerCase().split("")
+    for (let i = 0 ; i < test.length; i++){
+      if (mainString.includes(test[i]) == false){
+        return false
+      }
+    }
+    return true;
+  }
+  
+  mutation(["hello", "hey"]);
 
 
 
