@@ -49,4 +49,11 @@ function largestNumber(arr){
     return arrayForLarge;
 }
 
+// Confirm the ending 
+function confirmEnding(str, ending){
+    let rePattern = new RegExp( ending + "$")
+    return rePattern.test(str)
+}
 
+
+//
