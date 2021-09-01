@@ -141,7 +141,20 @@ function bouncer(arr){
   
   bouncer([7, "ate", "", false, 9]);
 
+//Where do I Belong - sorting algoritm 
 
+function getIndexToIns(arr, num) {
+    let toSort = [...arr, num]
+    toSort.sort((a,b)=> a-b)
+    let index = toSort.indexOf(num)
+    if(index > 0){
+      return index
+    }else{
+      return 0
+    }
+  }
+  
+  getIndexToIns([3, 10, 5], 3);
 
 
 
