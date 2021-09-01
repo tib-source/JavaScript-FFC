@@ -64,3 +64,71 @@ function repeatStringNumTimes(str, num){
     }
     return stringRepeated.join("")
 }
+
+
+// Truncate a String
+
+function truncateString(str, num){
+    if(str.length > num){
+      let trunc = str.slice(0, num);
+      trunc+= "..."
+      return trunc
+    }else{
+      return str
+    }
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+// Finders Keepers 
+
+function findElement(arr, func) {
+    let newArr = arr.map(func)
+    for(let i=0; i<arr.length;i++){
+      if (newArr[i]== true){
+        return arr[i]
+        }
+      }
+    return undefined
+  }
+  
+  findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
