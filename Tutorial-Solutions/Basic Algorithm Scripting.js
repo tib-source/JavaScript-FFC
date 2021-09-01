@@ -95,7 +95,16 @@ function findElement(arr, func) {
   findElement([1, 2, 3, 4], num => num % 2 === 0);
 
 
+  // Boo who
+
+  function booWho(bool) {
+    if (bool===true|bool===false){
+      return true
+    }
+    return false
+  }
   
+  booWho(null);
 
 
 
