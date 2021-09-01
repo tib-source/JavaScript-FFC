@@ -107,6 +107,19 @@ function findElement(arr, func) {
   booWho(null);
 
 
+// Title Case a sentence 
+
+function titleCase(str) {
+    let strings = str.split(" ")
+    strings = strings.map(str =>{
+       return str.charAt(0).toUpperCase() + str.slice(1, str.length).toLowerCase() 
+       }).join(" ")
+    return (strings)
+  
+  }
+  
+  titleCase("HERE IS MY HANDLE HERE IS MY SPOUT")
+
 
 
 
