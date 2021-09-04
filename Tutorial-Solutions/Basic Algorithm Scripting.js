@@ -308,9 +308,24 @@ function Bird() {
 
 `its an anonymous function that is executed imediatley after being declared`
 
+// example use case of IIFE 
+
+let funModule = (function(){
+  return {
+isCuteMixin:function(obj) {
+  obj.isCute = function() {
+    return true;
+  };
+},
+singMixin:function(obj) {
+  obj.sing = function() {
+    console.log("Singing to an awesome tune");
+  };
+}}
+})()
 
 
-
+`used to group related functionality into a single object or module`
 
 
 
