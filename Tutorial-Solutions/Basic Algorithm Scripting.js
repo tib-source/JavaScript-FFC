@@ -234,7 +234,60 @@ for(let property in beagle){
   }
 }
 
+// Change the prototyep to a New Object
 
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype = {
+  // Only change code below this line
+  numLegs: 4, 
+  eat: function(){
+    console.log("nom nom")
+  }, 
+  describe: function(){
+    console.log("My name is " + this.name);
+  },
+};
+
+// Overiding inherited methods 
+
+function Bird() { }
+
+Bird.prototype.fly = function() { return "I am flying!"; };
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Only change code below this line
+
+Penguin.prototype.fly = function(){return "Alas, this is a flightless bird."}
+
+// Only change code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly());
+
+// Learning the power of Mixins
+
+function Bird() { }
+
+Bird.prototype.fly = function() { return "I am flying!"; };
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Only change code below this line
+
+Penguin.prototype.fly = function(){return "Alas, this is a flightless bird."}
+
+// Only change code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly());
 
 
 
