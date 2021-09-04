@@ -290,6 +290,15 @@ let penguin = new Penguin();
 console.log(penguin.fly());
 
 
+// Private and public variables
+function Bird() {
+  let weight = 15;
+  this.getWeight = function(){
+    return weight
+  } 
+
+}
+
 
 
 
