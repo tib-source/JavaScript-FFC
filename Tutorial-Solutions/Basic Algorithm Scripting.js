@@ -300,6 +300,14 @@ function Bird() {
 }
 
 
+//Immediatley Invoked function Expression (IIFE)
+
+(function() {
+  console.log("A cozy nest is ready");
+})()
+
+`its an anonymous function that is executed imediatley after being declared`
+
 
 
 
