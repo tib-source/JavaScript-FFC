@@ -12,3 +12,16 @@ function sumAll(arr) {
   }
   
   sumAll([1, 4]);
+
+
+  //Find the Difference between two arrays 
+
+  function diffArray(arr1, arr2) {
+    var newArr = [];
+    let inArr1Only = arr1.filter(element =>{return arr2.includes(element) ? false : true})
+    let inArr2Only = arr2.filter(element =>{return arr1.includes(element) ? false : true})
+    newArr = [...inArr1Only, ...inArr2Only]
+    return (newArr);
+  }
+  
+  diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
