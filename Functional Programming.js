@@ -46,3 +46,39 @@ var new_s = s.myFilter(function(item) {
 });
 
 // working with map, reduce and filter functions 
+
+function getRating(watchList){
+    // Only change code below this line
+    let filteredList = watchList.filter((movie)=> movie.Director == "Christopher Nolan")
+    let mappedList = filteredList.map((movie)=> {
+      return {title: movie.Title, rating: movie.imdbRating}
+    })
+    let totalRating = mappedList.reduce((sum, movie )=> {
+      return sum + parseFloat(movie.rating)
+    }, 0)
+        console.log(totalRating)
+    let averageRating = totalRating/(mappedList.length)
+    // Only change code above this line
+    return averageRating;
+  }
+  console.log(getRating(watchList));
+
+// Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
+
+
+const squareList = arr => {
+    // Only change code below this line
+    return arr
+    .filter(number => {
+        if (Number.isInteger(number) && number > 0){
+        return true
+        }
+        return false
+    }).map(number => number ** 2 )
+
+
+    // Only change code above this line
+};
+
+const squaredIntegers = squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]);
+console.log(squaredIntegers);
