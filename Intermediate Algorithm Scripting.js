@@ -25,3 +25,18 @@ function sumAll(arr) {
   }
   
   diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+
+  // Seek and Destroy 
+
+  function destroyer(arr) {
+    let targets = [...arguments];
+    targets.shift()
+    var newArr = arr
+    for(let i = 0 ; i < targets.length ; i++ ){
+      newArr = newArr.filter(element => (!(element == targets[i])))
+    }
+    return (newArr)
+  }
+  
+  destroyer([1, 2, 3, 1, 2, 3], 2, 3);
