@@ -44,3 +44,5 @@ Array.prototype.myFilter = function(callback) {
 var new_s = s.myFilter(function(item) {
   return item % 2 === 1;
 });
+
+// working with map, reduce and filter functions 
