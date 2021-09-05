@@ -82,3 +82,17 @@ const squareList = arr => {
 
 const squaredIntegers = squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]);
 console.log(squaredIntegers);
+
+// Alphabetic sorting algorithm 
+
+function alphabeticalOrder(arr) {
+    // Only change code below this line
+    return arr.sort((previous, current)=> {
+      return previous === current ? 0 : previous > current ? 1 : -1 
+    })
+  
+    // Only change code above this line
+  }
+  alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+  
