@@ -57,7 +57,7 @@ function sumAll(arr) {
   console.log("MOEW " + whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }))
 
 
-  //  Spinal Tap Case
+//Spinal Tap Case
 
   
   
@@ -83,3 +83,18 @@ function translatePigLatin(str) {
   }
 
 console.log(translatePigLatin("algorithm"));
+
+// Search and Replace 
+
+function myReplace(str, before, after) {
+  if(before.charAt(0) == before.charAt(0).toUpperCase()){
+    let firstChar = after.charAt(0).toUpperCase()
+    after = firstChar + after.split("").slice(1).join("")
+  }else{
+    after = after.toLowerCase()
+  }
+  return str.replace(before, after)
+  
+}
+
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
