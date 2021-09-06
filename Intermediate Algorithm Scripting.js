@@ -40,3 +40,18 @@ function sumAll(arr) {
   }
   
   destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+  //Wherefore art thou
+  function whatIsInAName(collection, source) {
+    // Only change code below this line
+    let sourceProperties = Object.keys(source)
+    let arr = collection.filter(obj => {
+      return sourceProperties.every((key) => {
+        return ( obj.hasOwnProperty(key) && source[key] == obj[key])})
+        })
+    // Only change code above this line
+    return arr;
+  
+  }
+  
+  console.log("MOEW " + whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }))
