@@ -98,3 +98,25 @@ function myReplace(str, before, after) {
 }
 
 console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
+
+// DNA pairing 
+
+function pairElement(str) {
+  let pairs = {
+    "A" : "T",
+    "T" : "A",
+    "C" : "G",
+    "G" : "C"
+  }
+  let soloPairs = str.split("")
+  let paired = []
+  soloPairs.forEach(
+    strand => {
+      let pair =  [strand, pairs[strand]]
+      paired.push(pair)
+    }
+  )
+  return paired;
+}
+
+pairElement("GCG");
