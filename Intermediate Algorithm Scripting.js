@@ -55,3 +55,17 @@ function sumAll(arr) {
   }
   
   console.log("MOEW " + whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }))
+
+
+  //  Spinal Tap Case
+
+  
+  
+  function spinalCase(str) {
+    let regexCapSeparator = /([a-z])([A-Z])/g ;
+    str = str.replace(regexCapSeparator, "$1 $2")
+    let regex = /[a-z]+/gi
+    return str.toLowerCase().match(regex).join("-")
+  }
+
+spinalCase('thisIsSpinalTap');
