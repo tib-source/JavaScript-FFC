@@ -120,3 +120,22 @@ function pairElement(str) {
 }
 
 pairElement("GCG");
+
+//Missing letters
+
+
+function fearNotLetter(str) {
+  let letters = "abcdefghijklmnopqrstuvwxyz"
+  letters.split("")
+  let copyStr = str.split("")
+  let first = copyStr.shift()
+  let range = letters.slice(letters.indexOf(first))
+  for (let i = 0 ; i < str.length ; i++ ){
+    if (str[i] !== range[i]){
+      return range[i]
+    }
+  } 
+  return undefined;
+}
+
+console.log(fearNotLetter("abcdefghjklmno"));
