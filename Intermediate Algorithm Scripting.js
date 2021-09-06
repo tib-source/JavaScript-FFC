@@ -69,3 +69,17 @@ function sumAll(arr) {
   }
 
 spinalCase('thisIsSpinalTap');
+
+//Pig Latin
+
+function translatePigLatin(str) {
+  let vowels = /^[^aeiou]*/ig
+  let first = str.match(vowels)
+  if(first[0].length > 0) {
+    return str.slice(first[0].length) + first[0] +  "ay"
+  }else{
+    return str + "way"
+  }
+  }
+
+console.log(translatePigLatin("algorithm"));
