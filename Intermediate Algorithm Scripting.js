@@ -154,3 +154,35 @@ function uniteUnique(arr) {
 }
 
 console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+// Convert HTML entities 
+
+function convertHTML(str) {
+  let words = str.split(" ")
+  words.forEach((word,index)=> {
+    let letters = word.split("")
+    letters.forEach((letter, index)=> {
+      switch (letter){
+        case '"':
+          letters[index] = "&quot;";
+          break;
+        case '<':
+          letters[index] = "&lt;"
+          break;
+        case ">":
+          letters[index] = "&gt;"
+          break;
+        case "'":
+          letters[index] = "&apos;"
+          break;        
+        case '&':
+          letters[index] = "&amp;" 
+          break;
+      }
+    }, letters)
+  return words[index] = letters.join("")
+  }, words)
+  return words.join(" ");
+}
+
+console.log(convertHTML("Hamburgers < Pizza < Tacos"));
