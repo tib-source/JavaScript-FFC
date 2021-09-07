@@ -208,3 +208,33 @@ function sumFibs(num) {
 }
 
 console.log(sumFibs(75024));
+
+
+// Sum all Primes 
+
+function sumPrimes(num) {
+  num = num + 1 
+  let boolArray = new Array(num).fill(true)
+  for(let i = 2 ; i <= Math.sqrt(num); i++ ){
+    if ( boolArray[i]){
+      let t = 0
+      let j = Math.pow(i,2)
+      while ( j <= num){
+        j = Math.pow(i,2) + (t * i)
+        if (j >= boolArray.length){
+          break
+        }
+        boolArray[j] = false
+        t++
+      }
+    }
+  }
+  let integerArray = [...Array(num).keys()]
+  integerArray =  integerArray.filter((element, index)=>{
+    return boolArray[index]
+  })
+  
+  return integerArray.filter(element=> element>=2).reduce((sum,current)=>{return sum += current}, 0)
+}
+
+console.log(sumPrimes(10));
