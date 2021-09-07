@@ -186,3 +186,25 @@ function convertHTML(str) {
 }
 
 console.log(convertHTML("Hamburgers < Pizza < Tacos"));
+
+
+// Sum All Odd Fibonacci Numbers
+
+
+function sumFibs(num) {
+  let fibSequence = [0 , 1];
+  for (let i = 2 ; i <= 50; i++){
+    if (fibSequence[i-1] > num) {
+      break;
+    }
+    fibSequence[i] = fibSequence[i-1 ] + fibSequence[i-2]
+  };
+
+  let closest = [...fibSequence].pop()
+  let odds = fibSequence.slice(0, fibSequence.indexOf(closest))
+  .filter(element => element%2 == 1)
+  return odds.reduce( (sum, curr)=>{ return sum += curr}, 0)
+   
+}
+
+console.log(sumFibs(75024));
