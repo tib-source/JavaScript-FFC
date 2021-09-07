@@ -139,3 +139,18 @@ function fearNotLetter(str) {
 }
 
 console.log(fearNotLetter("abcdefghjklmno"));
+
+
+//Sorted Union 
+
+function uniteUnique(arr) {
+  let lists = [...arguments]
+  let newArr = []
+  for (let x = 0 ; x < lists.length; x++ ){
+    let filtered = lists[x].filter(element => (!newArr.includes(element)))
+    newArr.push(...filtered)
+  }
+  return newArr
+}
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
