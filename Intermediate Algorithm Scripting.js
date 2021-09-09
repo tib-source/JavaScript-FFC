@@ -297,3 +297,20 @@ function dropElements(arr, func) {
 }
 
 console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;}))
+
+//Steam Roller 
+
+function steamrollArray(arr) {
+  const naked = []
+  function flattener(arr){
+    if (Array.isArray(arr)){
+      arr.forEach(element => flattener(element))
+    }else{
+      naked.push(arr)
+    }
+  }
+  flattener(arr)
+  return naked;
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));
