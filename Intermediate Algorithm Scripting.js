@@ -336,3 +336,26 @@ function truthCheck(collection, pre) {
 }
 
 truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+
+
+//Arguments Optional 
+
+function addTogether() {
+  let arr = [...arguments]
+  let current = 0
+  if(arr.length == 2){
+    if(Number.isInteger(arr[0]) && Number.isInteger(arr[1])){ return arr.reduce((sum, curr)=> sum += curr, 0)}
+    else return undefined
+  }else{
+    if(Number.isInteger(arr[0])){
+      current = arr[0]
+      return function(b) {
+        return addTogether(current, b)
+      }
+    }else{
+      return undefined
+    }
+  }
+}
+
+addTogether(5)(7);
