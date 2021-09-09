@@ -258,3 +258,41 @@ function smallestCommons(arr) {
 
 
 smallestCommons([1,5]);
+
+// Smallest Common Multiple
+
+function smallestCommons(arr) {
+
+  function range(min, max){
+    let final = []
+    for (let i = min; i <= max; i++){
+      final.push(i)
+    }
+    return final
+  }
+
+  function gcd2(a,b){
+    if(!b) return b===0 ? a : NaN;
+    return gcd2(b,a%b)
+  }
+
+  function lcm2(a, b){
+    return a*b /gcd2(a,b)
+  }
+
+  function lcm(array){
+    var n = 1 
+    for (var i = 0; i<array.length; i++ ){
+      n = lcm2(array[i],n)
+    }
+    return n
+  }
+
+  let min = Math.min(arr[0],arr[1])
+  let max = Math.max(arr[0],arr[1])
+  let array = range(min, max)
+  return lcm(array)
+}
+
+
+console.log(smallestCommons([1,5]));
