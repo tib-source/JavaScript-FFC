@@ -277,3 +277,23 @@ function smallestCommons(arr) {
 
 
 console.log(smallestCommons([1,5]));
+
+//Drop It algorithm 
+
+function dropElements(arr, func) {
+  let previous = false
+  let retArr = []
+  for(let i = 0; i < arr.length; i++){ 
+    let curr = func(arr[i])
+    if(curr==false&&previous==false){
+      previous = curr
+      continue 
+    }else{
+      previous = curr
+      retArr.push(arr[i])
+    }
+  }
+  return retArr;
+}
+
+console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;}))
