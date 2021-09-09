@@ -244,25 +244,6 @@ console.log(sumPrimes(10));
 
 function smallestCommons(arr) {
 
-  for( let num = 0 ; num < arr.length; num++ ){
-    let factors = []
-    let divisor = 2 
-    let n = arr[num]
-    while(n >= 2){
-      if(n % divisor == 0 ){
-        factors.push(divisor)
-      }
-    }
-  }
-}
-
-
-smallestCommons([1,5]);
-
-// Smallest Common Multiple
-
-function smallestCommons(arr) {
-
   function range(min, max){
     let final = []
     for (let i = min; i <= max; i++){
