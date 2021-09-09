@@ -359,3 +359,35 @@ function addTogether() {
 }
 
 addTogether(5)(7);
+
+//Make A Person 
+
+var Person = function(fullerName) {
+  var fullName = fullerName
+  // Only change code below this line
+  // Complete the method below and implement the others similarly
+  this.getFullName = () => { return this.getFirstName() + " "+ this.getLastName();}
+  this.getFirstName = () => {return fullName.split(" ")[0];}
+  this.getLastName = () => {return fullName.split(" ")[1];}
+  this.setFirstName = function(name){
+    let prev = fullName.split(" ")
+    prev.shift()
+    prev.unshift(name)
+    fullName = prev.join(" ")
+  };
+  this.setLastName = function(name){
+    let prev = fullName.split(" ")
+    prev.pop()
+    prev.push(name)
+    fullName = prev.join(" ")
+  };
+  this.setFullName = function(name) { 
+   fullName = name
+  };
+  
+  
+  };
+
+
+var bob = new Person('Bob Ross')
+console.log(bob.getFullName())
