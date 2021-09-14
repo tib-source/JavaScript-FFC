@@ -62,3 +62,24 @@ it("It should pass fixed tests", function(){
     Test.assertEquals(songDecoder("WUBAWUBBWUBCWUB"), "A B C","heading or trailing spaces should be removed");
 });
 });
+
+
+
+// Playing with digits 
+
+function digPow(n, p){
+  // ...
+  let counter = 0
+  let nums = n.toString().split("").map(num=>{
+    let curr = parseInt(num)
+    curr = Math.pow(curr, (p + counter))
+    counter += 1
+    return curr
+  }).reduce((sum,curr)=> sum += curr, 0)
+  
+  let div = parseInt(nums)/n
+  
+  return Number.isInteger(div) ? div : -1 
+}
+
+digPow(89, 1)
