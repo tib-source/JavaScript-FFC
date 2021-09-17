@@ -191,3 +191,50 @@ function reverseWords(str) {
     return word.split("").reverse().join("")
   }).join(" ")
 }
+
+`
+This time we want to write calculations using functions and get the results.
+Let's have a look at some examples:
+
+seven(times(five())); // must return 35
+four(plus(nine())); // must return 13
+eight(minus(three())); // must return 5
+six(dividedBy(two())); // must return 3
+Requirements:
+
+There must be a function for each number from 0 ("zero") to 9 ("nine")
+There must be a function for each of the following mathematical operations: plus, minus, times, dividedBy (divided_by in Ruby and Python)
+Each calculation consist of exactly one operation and two numbers
+The most outer function represents the left operand, the most inner function represents the right operand
+Division should be integer division. For example, this should return 2, not 2.666666...:
+eight(dividedBy(three()));
+`
+let nums = {
+  zero: 0,
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  }
+  
+  
+  function zero(f) { let num = nums["zero"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  function one(f) { let num = nums["one"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  function two(f) { let num = nums["two"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  function three(f) { let num = nums["three"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  function four(f) { let num = nums["four"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  function five(f) { let num = nums["five"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  function six(f) { let num = nums["six"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  function seven(f) { let num = nums["seven"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  function eight(f) { let num = nums["eight"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  function nine(f) { let num = nums["nine"]; if(f === undefined){return `${num}` }else{ return Math.floor(eval(`${num}${f}`))}}
+  
+  function plus(n) { return ` + ${n}`}
+  function minus(n) { return ` - ${n}`}
+  function times(n) { return ` * ${n}`}
+  function dividedBy(n) { return ` / ${n}`}
