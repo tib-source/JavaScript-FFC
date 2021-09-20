@@ -328,3 +328,35 @@ function rot13(message){
 
 
 rot13("ve7z ")
+
+
+/// RGB to HEX conversion 
+
+function rgb(r, g, b){
+  // complete this function 
+  let hexcode = {
+    10:"A",
+    11:"B",
+    12:"C",
+    13:"D",
+    14:"E",
+    15:"F"
+  }
+  let colorList = [r,g,b].map(color=> {
+    if (color>255){color = 255}
+    if (color<0){color=0}
+    let first = color/16
+    let floored = Math.floor(first)
+    let diff = first - floored
+    let second = diff * 16
+    let secondFloor = Math.floor(second)
+    first = (first < 10) ? floored : hexcode[floored.toString()]
+    second = (second < 10) ? secondFloor : hexcode[Math.floor(second).toString()]
+    return `${first}${second}`
+  })
+  
+  return colorList.join("")
+}
+
+
+rgb(173,255,47)
