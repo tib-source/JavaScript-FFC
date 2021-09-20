@@ -360,3 +360,41 @@ function rgb(r, g, b){
 
 
 rgb(173,255,47)
+
+
+// 
+`We need to sum big numbers and we require your help.
+
+Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.
+
+Example
+add("123", "321"); -> "444"
+add("11", "99");   -> "110"
+Notes
+The input numbers are big.
+The input is a string of only digits
+The numbers are positives`
+
+function add(a, b) {
+  let num1 = (a.split("").length > b.split("").length) ? a.split(""): b.split("")
+  let num2 = (a.split("").length > b.split("").length) ? b.split(""): a.split("")
+  let smaller = Array(num1.length-num2.length).fill("0").concat(num2)
+  for(let i = num1.length -1 ; i >= 0; i--){
+    let curr = parseInt(num1[i]) + parseInt(smaller[i]);
+    if (curr >= 10){
+      if(i==0){
+        num1.shift()
+        num1.unshift(curr.toString());
+      }else{
+        num1[i-1] = (parseInt(num1[i-1]) + 1).toString();
+        num1[i] = curr.toString()[1];
+      }
+    }else{ num1[i] = curr.toString()}
+  }
+  return num1.join("");
+}
+
+
+add('63829983432984289347293874', '90938498237058927340892374089')
+
+// returns "91002328220491911630239667963"
