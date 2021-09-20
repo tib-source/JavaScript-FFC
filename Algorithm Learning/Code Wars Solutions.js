@@ -293,3 +293,38 @@ var number=function(array){
     return `${i+1}: ${e}`
   })
 }
+
+
+
+
+// ROTATE 13 
+
+
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}
+
+function rot13(message){
+  //your code here
+  let alphabet = "abcdefghijklmnopqrstuvwxyz"
+  let ca = alphabet.toUpperCase().split("")
+  let a = alphabet.split("")
+
+  message = message.split("").map(letter=> {
+    let regex = /[a-z]/i
+    if (letter.match(regex)){
+      if (letter === letter.toUpperCase()){
+        return ca[(mod(ca.indexOf(letter)+13,26))]
+      }else if(letter === letter.toLowerCase()){
+        return a[(mod(a.indexOf(letter)+13,26))]
+      }
+    }else{
+      return letter
+    }
+  })
+  
+  return message.join("")
+  }
+
+
+rot13("ve7z ")
