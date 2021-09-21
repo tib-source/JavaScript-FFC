@@ -398,3 +398,42 @@ function add(a, b) {
 add('63829983432984289347293874', '90938498237058927340892374089')
 
 // returns "91002328220491911630239667963"
+
+
+///
+
+`Complete the solution so that it strips all text that follows any of a set of comment markers passed in. 
+Any whitespace at the end of the line should also be stripped out.
+
+Example:
+
+Given an input string of:
+
+apples, pears # and bananas
+grapes
+bananas !apples
+
+The output expected would be:
+
+apples, pears
+grapes
+bananas
+
+The code would be called like so:
+
+var result = solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"])
+// result should == "apples, pears\ngrapes\nbananas"`
+
+function solution(input, markers) {
+  let lines = input.split("\n")
+  lines = lines.map((line)=>{
+    line = line.split("")
+    let foundEx = line.indexOf(markers[0]), 
+        foundSe = line.indexOf(markers[1])
+    let meow = (foundEx>0) ? line.splice(foundEx,line.length,"").join(""):(foundSe>0) ? line.splice(foundSe,line.length,"").join(""):line.join("")
+    return line.join("").trim()
+  }).join("\n")
+  return lines
+}
+
+solution("Q @b\nu\ne -e f g", ["@", "-"]) // returns "Q\nu\ne"
