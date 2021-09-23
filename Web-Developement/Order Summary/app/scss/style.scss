@@ -11,9 +11,13 @@
     }
 }
 .container{
-    display: flex;
-    justify-content: center;
-    background: url("../../images/pattern-background-desktop.svg") no-repeat center ;
+    margin-top: 100px;
+    background: url("../../images/pattern-background-desktop.svg") no-repeat;
+    background-color: $veryPaleBlue;
     width: 1440px;
-    height: 1000px;
+    height: 80vh;
+    box-shadow: 0 0 50px rgb(226, 226, 226);
+    border-radius: 1em;
 }
+
+
