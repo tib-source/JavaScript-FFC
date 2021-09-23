@@ -1,0 +1,19 @@
+@import "variables";
+@import "globals";
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-dc{
+        flex-direction: column;
+    }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    background: url("../../images/pattern-background-desktop.svg") no-repeat center ;
+    width: 1440px;
+    height: 1000px;
+}
