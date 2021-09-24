@@ -27,6 +27,7 @@ function alphabetPosition(text) {
   
   alphabetPosition("The sunset sets at twelve o' clock.")
 
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 `
 Polycarpus works as a DJ in the best Berland nightclub, and he often uses dubstep music in his performance. Recently, he has decided to take a couple of old songs and make dubstep remixes from them.
@@ -64,6 +65,7 @@ it("It should pass fixed tests", function(){
 });
 
 
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 // Playing with digits 
 
@@ -84,7 +86,7 @@ function digPow(n, p){
 
 digPow(89, 1)
 
-
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 //
 `
 Given the triangle of consecutive odd numbers:
@@ -124,6 +126,7 @@ describe("Basic tests", () => {
 });
 
 
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 `A pangram is a sentence that contains every single letter of the alphabet at least once.
 For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram,
@@ -144,6 +147,7 @@ function isPangram(string){
   return Object.keys(obj).length == 26 ? true : false   
   }
 
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 `Given an array of integers, find the one that appears an odd number of times.
 
@@ -176,7 +180,7 @@ function findOdd(A) {
   
   // expects a 5
 
-
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 `Complete the function that accepts a string parameter,
 and reverses each word in the string.
 All spaces in the string should be retained.
@@ -191,6 +195,7 @@ function reverseWords(str) {
     return word.split("").reverse().join("")
   }).join(" ")
 }
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 `
 This time we want to write calculations using functions and get the results.
@@ -239,7 +244,7 @@ let nums = {
   function times(n) { return ` * ${n}`}
   function dividedBy(n) { return ` / ${n}`}
 
-
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 `Write a function that takes an array of numbers (integers for the tests)
  and a target number. It should find two different items in the array that
 ,when added together, give the target value. The indices of these items
@@ -275,6 +280,8 @@ function twoSum(numbers, target) {
   }
 }
 
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
 `Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
 
 Write a function which takes a list of strings and returns each line prepended by the correct number.
@@ -298,7 +305,7 @@ var number=function(array){
 
 
 // ROTATE 13 
-
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 function mod(n, m) {
   return ((n % m) + m) % m;
@@ -329,6 +336,7 @@ function rot13(message){
 
 rot13("ve7z ")
 
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 /// RGB to HEX conversion 
 
@@ -362,7 +370,9 @@ function rgb(r, g, b){
 rgb(173,255,47)
 
 
-// 
+//
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
 `We need to sum big numbers and we require your help.
 
 Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.
@@ -401,7 +411,7 @@ add('63829983432984289347293874', '90938498237058927340892374089')
 
 
 ///
-
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 `Complete the solution so that it strips all text that follows any of a set of comment markers passed in. 
 Any whitespace at the end of the line should also be stripped out.
 
@@ -439,6 +449,7 @@ function solution(input, markers) {
 solution("Q @b\nu\ne -e f g", ["@", "-"]) // returns "Q\nu\ne"
 
 //
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 `
 Write a function that, given a string of text (possibly with punctuation and line-breaks), returns an array of the top-3 most occurring words, in descending order of the number of occurrences.
 
