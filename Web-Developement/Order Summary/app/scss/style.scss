@@ -16,6 +16,10 @@
     &-jc{
         justify-content: center;
     }
+
+    &-je{
+        justify-content: flex-start;
+    }
 }
 .container{
     margin-top: 100px;
@@ -27,11 +31,7 @@
     border-radius: 1em;
 }
 
-@media (max-width:600px) {
-    .content{
-        width: 300px;
-    }
-}
+
 .content{ 
     text-align: center;
     width: 400px;
@@ -44,6 +44,8 @@
 
     &__image{
         margin-bottom: 10px;
+        width: 100%;
+        height: auto;
     }
 
 
@@ -69,12 +71,15 @@
         margin-bottom: toRem(25)*1rem;
 
         img{
-            justify-self:flex-start ;
-            margin-right: 20px;
+            border: inherit;
+        }
+        .img{
+            flex: 2;
+    
         }
         span{
-            display: block;
-            margin-right: 60px;
+            border: inherit;
+            flex: 0.6;
         }
         
         span:first-child{
@@ -86,7 +91,8 @@
             color: $desaturatedBlue;
         }
         .change{
-            margin: 0 auto;
+            flex: 2;
+            margin-right: -2rem;
             color: purple;
             text-decoration: underline;
             cursor: pointer;
@@ -124,6 +130,11 @@
         cursor: pointer;
     }
 
+    .middle{
+        display: flex;
+        flex:2;
+        flex-direction: column;
+    }
 
     &__cancel:hover{
         color:$darkBlue ;
@@ -131,3 +142,19 @@
 }
 
 
+@media (max-width:600px) {
+
+    .container{
+        width: auto;
+    }
+    .content{
+        width: 85%;
+    }
+}
+
+@media (max-width:350px) {
+    body{
+        font-size: 85%;
+    }
+    
+}
