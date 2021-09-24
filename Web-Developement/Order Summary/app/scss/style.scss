@@ -41,7 +41,9 @@
     background: white;
     box-shadow: 0px 20px 20px rgb(241, 241, 241);
 
-
+    a{
+        text-decoration: none;
+    }
     &__image{
         margin-bottom: 10px;
         width: 100%;
