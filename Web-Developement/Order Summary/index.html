@@ -14,23 +14,26 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="flex ">
+<body class="flex flex-jc">
 
-  <div class="container flex flex-dc">
-    <div class="content">
+  <div class="container flex flex-dc flex-jc">
+    <div class="content flex flex-dc">
       <img class="content__image" src="/images/illustration-hero.svg" alt="illustration-hero" >
-      <div class="conttitle">Order Summary</div>
+      <div class="content__title">Order Summary</div>
       <p class="content__text">
         You can now listen to millions of songs, audiobooks, and podcasts on any
         device anywhere you like!
       </p>
-      <div class="content__plan">
-        Annual Plan
-        $59.99/year
-        Change
+      <div class="content__plan flex">
+        <img src="images/icon-music.svg" alt="music icon" srcset="">
+        <div class="middle">
+          <span>Annual Plan</span>
+          <span>$59.99/year</span>
+        </div>
+        <a href="#" class="change">Change</a>
       </div>
-      <a href="#" class="content__link">Proceed to Payment</a>
-      <a href="#" class="content__cancel">Cancel Order</a>
+      <div href="#" class="content__link">Proceed to Payment</div>
+      <div href="#" class="content__cancel">Cancel Order</div>
     </div>
     
     <div class="attribution">

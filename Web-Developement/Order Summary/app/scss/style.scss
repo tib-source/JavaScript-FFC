@@ -1,13 +1,20 @@
 @import "variables";
 @import "globals";
 
+@function toRem($value){
+    @return $value/16
+}
+
+
 .flex{
     display: flex;
-    justify-content: center;
     align-items: center;
 
     &-dc{
         flex-direction: column;
+    }
+    &-jc{
+        justify-content: center;
     }
 }
 .container{
@@ -18,6 +25,109 @@
     height: 80vh;
     box-shadow: 0 0 50px rgb(226, 226, 226);
     border-radius: 1em;
+}
+
+@media (max-width:600px) {
+    .content{
+        width: 300px;
+    }
+}
+.content{ 
+    text-align: center;
+    width: 400px;
+    overflow: hidden;
+    height: 600px;
+    border-radius: 1em;
+    background: white;
+    box-shadow: 0px 20px 20px rgb(241, 241, 241);
+
+
+    &__image{
+        margin-bottom: 10px;
+    }
+
+
+    &__title{
+        font-weight: 900;
+        font-size: toRem(20) * 1rem;
+        margin-top: 30px;
+        color: $darkBlue;
+    }
+    
+    &__text{
+        text-align: center;
+        width: 70%;
+        color: $desaturatedBlue;
+    }
+    
+
+    &__plan{
+        width: 80%;
+        background: $veryPaleBlue;
+        border-radius:0.6em;
+        padding: toRem(15)*1rem ;
+        margin-bottom: toRem(25)*1rem;
+
+        img{
+            justify-self:flex-start ;
+            margin-right: 20px;
+        }
+        span{
+            display: block;
+            margin-right: 60px;
+        }
+        
+        span:first-child{
+            font-weight: 900;
+            color: $darkBlue;
+            margin-bottom: 5px  ;
+        }
+        span:last-child{
+            color: $desaturatedBlue;
+        }
+        .change{
+            margin: 0 auto;
+            color: purple;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.4s;
+        }
+        .change:hover{
+            text-decoration: none;
+        }
+        
+    }
+
+
+    &__link{
+        width: 80%;
+        background: $brightBlue;
+        color: white;
+        font-weight: 700;
+        padding: 0.75em;
+        border-radius: 0.6em;
+        box-shadow: 0px 20px 20px $paleBlue;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    &__link:hover{
+        opacity: 0.7;        
+    }
+    &__cancel{
+        margin-top: 25px;
+        color: $desaturatedBlue;
+        font-size: toRem(14)*1rem;
+        font-weight: 900;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+
+
+    &__cancel:hover{
+        color:$darkBlue ;
+    }
 }
 
 

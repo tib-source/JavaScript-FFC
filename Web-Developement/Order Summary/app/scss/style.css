@@ -22,9 +22,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -37,6 +34,12 @@ body {
           flex-direction: column;
 }
 
+.flex-jc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .container {
   margin-top: 100px;
   background: url("../../images/pattern-background-desktop.svg") no-repeat;
@@ -46,5 +49,113 @@ body {
   -webkit-box-shadow: 0 0 50px #e2e2e2;
           box-shadow: 0 0 50px #e2e2e2;
   border-radius: 1em;
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: 300px;
+  }
+}
+
+.content {
+  text-align: center;
+  width: 400px;
+  overflow: hidden;
+  height: 600px;
+  border-radius: 1em;
+  background: white;
+  -webkit-box-shadow: 0px 20px 20px #f1f1f1;
+          box-shadow: 0px 20px 20px #f1f1f1;
+}
+
+.content__image {
+  margin-bottom: 10px;
+}
+
+.content__title {
+  font-weight: 900;
+  font-size: 1.25rem;
+  margin-top: 30px;
+  color: #1f2f56;
+}
+
+.content__text {
+  text-align: center;
+  width: 70%;
+  color: #7280a7;
+}
+
+.content__plan {
+  width: 80%;
+  background: #f5f7ff;
+  border-radius: 0.6em;
+  padding: 0.9375rem;
+  margin-bottom: 1.5625rem;
+}
+
+.content__plan img {
+  justify-self: flex-start;
+  margin-right: 20px;
+}
+
+.content__plan span {
+  display: block;
+  margin-right: 60px;
+}
+
+.content__plan span:first-child {
+  font-weight: 900;
+  color: #1f2f56;
+  margin-bottom: 5px;
+}
+
+.content__plan span:last-child {
+  color: #7280a7;
+}
+
+.content__plan .change {
+  margin: 0 auto;
+  color: purple;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 700;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.content__plan .change:hover {
+  text-decoration: none;
+}
+
+.content__link {
+  width: 80%;
+  background: #3829e0;
+  color: white;
+  font-weight: 700;
+  padding: 0.75em;
+  border-radius: 0.6em;
+  -webkit-box-shadow: 0px 20px 20px #e0e8ff;
+          box-shadow: 0px 20px 20px #e0e8ff;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.content__link:hover {
+  opacity: 0.7;
+}
+
+.content__cancel {
+  margin-top: 25px;
+  color: #7280a7;
+  font-size: 0.875rem;
+  font-weight: 900;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.content__cancel:hover {
+  color: #1f2f56;
 }
 /*# sourceMappingURL=style.css.map */
