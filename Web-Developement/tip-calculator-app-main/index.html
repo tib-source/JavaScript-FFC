@@ -15,31 +15,67 @@
   </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="content flex flex-ac flex-jc flex-cl">
+    <div class="container flex flex-ac flex-jc">
+      <div class="mini flex">
+        <div class="calculator">
+          <div class="inital">
+            <span>Bill</span>
+            <div class="input flex">
+              <img src="./images/icon-dollar.svg" alt="dollar icon" class="icon">
+              <input class="num" type="number" value="0">
+            </div>
+          </div>
+          <div class="tip_value">
+            <span>Select Tip %</span>
+            <div class="grid">
+              <button class="tip">5% </button>
+              <button class="tip">10% </button>
+              <button class="tip">15% </button>
+              <button class="tip">25% </button>
+              <button class="tip">50% </button>
+              <input class="tip" placeholder="Custom" type="number" value="Custom" >
+            </div>
+          </div>
+          <div class="inital">
+            <span>Number of People</span>
+            <div class="input flex">
+              <img src="./images/icon-person.svg" alt="icon-person" class="icon">
+              <input class="num" type="number" value="0">
+            </div>
+          </div>
+        </div>
+        <div class="calculator">
+          <div class="tip_amount">
+            <div class="text">
+              <span class="top">Tip Amount</span>
+              <span class="bottom">/ person</span>
+            </div>
+            <div class="calculated">
+              <h1>$0.00</h1>
+            </div>
+          </div>
+          <div class="total">
+            <div class="text">
+              <span class="top">Total</span>
+              <span class="bottom">/ person</span>
+            </div>
+            <div class="calculated">
+              <h1>$0.00</h1>
+            </div>
+          </div>
+          <button onclick="reset()">Reset</button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
+  
+
 
   <script src="./app/js/index.js"></script>
 </body>

@@ -16,6 +16,107 @@ body {
   overflow: auto;
   line-height: 1.3;
   font-family: 'Space Mono', monospace;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ac {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-cl {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
   background-color: #c5e4e7;
+}
+
+.content .container {
+  width: 900px;
+  background-color: white;
+  border-radius: 2em;
+  color: #5e7a7d;
+  font-weight: 700;
+  -webkit-box-shadow: 0 1.25rem 20px rgba(38, 192, 171, 0.118);
+          box-shadow: 0 1.25rem 20px rgba(38, 192, 171, 0.118);
+}
+
+.content .container .mini {
+  width: 100%;
+  padding: 2em;
+}
+
+.content .container .mini .calculator {
+  width: 50%;
+  padding: 2em;
+  border-radius: 2em;
+}
+
+.content .container .mini .calculator .input {
+  margin-top: 10px;
+  border-radius: 0.4rem;
+  width: 100%;
+  background-color: #f4fafa;
+  padding: 0.8125rem 0.625rem;
+}
+
+.content .container .mini .calculator .input .num {
+  all: unset;
+  text-align: right;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.content .container .mini .calculator .grid {
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  margin-top: 1em;
+  -ms-grid-columns: 31% 31% 31%;
+      grid-template-columns: 31% 31% 31%;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.content .container .mini .calculator .grid .tip {
+  all: unset;
+  color: #f4fafa;
+  text-align: center;
+  background-color: #00494d;
+  padding: 0.5em 1em;
+  border-radius: 0.25rem;
+}
+
+.content .container .mini .calculator .grid .tip:last-child {
+  font-weight: 700;
+  color: #5e7a7d;
+  background-color: #f4fafa;
+}
+
+.content .container .mini .calculator > * {
+  margin-bottom: 30px;
+}
+
+.content .container .mini .calculator:last-child {
+  background-color: #00494d;
+  color: #c5e4e7;
 }
 /*# sourceMappingURL=style.css.map */
