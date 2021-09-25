@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@100&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: auto;
+  font-size: 100%;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ac {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.content {
+  width: 100%;
+  background-color: #090b1a;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  background-color: #1b1938;
+  border-radius: 0.5em;
+  overflow: hidden;
+  width: 900px;
+  margin: auto;
+}
+
+.content .container .img {
+  width: 100%;
+  height: auto;
+  background: url("../../images/image-header-desktop.jpg") no-repeat;
+  -webkit-filter: contrast(0.8);
+          filter: contrast(0.8);
+  background-size: cover;
+  background-color: #aa5cdb;
+  background-blend-mode: multiply;
+}
+
+.content .container__info {
+  padding: 2em 3em;
+}
+
+.content .container__bold {
+  color: #aa5cdb;
+}
+
+.content .container__text {
+  font-family: "Inter";
+  font-weight: 400;
+  width: 90%;
+  margin-bottom: 1.875em;
+}
+
+.content .container__text p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  font-size: 0.8125em;
+}
+
+.content .container__footer {
+  margin: auto;
+  margin-top: 3.125em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .container .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+}
+
+.content .container .stats .span {
+  font-size: 1em;
+  color: inherit;
+  font-weight: 700;
+}
+
+.content .container .stats p {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.6875em;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+/*# sourceMappingURL=style.css.map */

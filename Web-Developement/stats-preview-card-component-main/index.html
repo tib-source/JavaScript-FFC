@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Stats preview card component</title>
-
+  <link rel="stylesheet" href="./app/scss/style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,19 +15,28 @@
   </style>
 </head>
 <body>
+  <main class="content flex flex-ac flex-jc">
+    <header class="container">
+      <div class="container__info">
+        <h1 class="container__title">Get <span class="container__bold">insights</span> that help your business grow.</h1>
+        <div class="container__text">
+          <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.</p>
 
-  Get insights that help your business grow.
+          <div class="container__footer">
+            <div class="stats"><span class="span">10k+</span> <p>companies</p></div>
+            <div class="stats"><span class="span">314</span> <p>templates</p></div>
+            <div class="stats"><span class="span">12m+</span> <p>queries</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="img" ></img>
+    </header>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>

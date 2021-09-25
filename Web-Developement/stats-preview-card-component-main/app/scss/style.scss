@@ -1,0 +1,113 @@
+@import "variables";
+@import "globals";
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@100&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+@function toRem($px){
+    @return ($px/16)*1em
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: auto;
+    font-size: 100%;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.flex{
+    display: flex;
+
+    &-jc{
+        justify-content: center;
+    }
+    &-ac{
+        align-content: center;
+    }
+}
+
+.content{
+    width: 100%;
+    background-color: $veryDarkBlue;
+    height: 100vh;
+    flex-direction: column;
+    .container{
+        display: flex;
+        color: $white;
+        background-color: $darkDesaturatedBlue;
+        border-radius: 0.5em;
+        overflow: hidden;
+        width: 900px;
+        margin: auto;
+
+        .img{
+            width: 100%;
+            height: auto;
+            background:url("../../images/image-header-desktop.jpg") no-repeat;
+            filter: contrast(0.8);
+            background-size: cover;
+            background-color: $softViolet;
+            background-blend-mode: multiply;
+            
+        }
+
+
+        &__info{
+            padding: 2em 3em;
+        }
+
+        &__bold{
+            color: $softViolet;
+        }
+        &__text{
+            font-family: "Inter";
+            font-weight: 400 ;
+            width: 90%;
+            margin-bottom: toRem(30);
+
+            p{
+                color: $slightlyTransparentWhiteMain;
+                line-height: 1.6;
+                font-size: toRem(13);
+            }
+        }
+
+        &__footer{
+            margin: auto;
+            margin-top: toRem(50);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .stats{
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+
+            .span{
+                font-size: toRem(16);
+                color: inherit;
+                font-weight: 700;
+                
+            }
+
+            p{
+                margin-top:5px ;
+                color: $slightlyTransparentWhiteParagraphs;
+                font-size: toRem(11);
+                font-family: "Lexend Deca";
+                font-weight: 400;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+}
