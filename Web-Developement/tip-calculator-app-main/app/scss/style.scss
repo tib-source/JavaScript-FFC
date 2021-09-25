@@ -54,7 +54,6 @@
                     display: grid;
                     margin-top: 1em;
                     grid-template-columns: 31% 31% 31%;
-                    font-weight: $medium;
                     gap: 10px;
                     .tip{
                         all:unset;
@@ -63,10 +62,14 @@
                         background-color: $veryDarkcyan;
                         padding: 0.5em 1em;
                         border-radius: 0.25rem;
+                        transition: 0.4s;
+                        border: 1px thin $strongCyan;
                     }
 
+                    .tip:hover{
+                        transform: scale(1.1);
+                    }
                     .tip:last-child{
-                        font-weight: $large;
                         color:$darkGrayishCyan;
                         background-color: $secondLightGrayishCyan;
                     }

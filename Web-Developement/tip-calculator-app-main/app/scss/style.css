@@ -92,7 +92,6 @@ body {
   margin-top: 1em;
   -ms-grid-columns: 31% 31% 31%;
       grid-template-columns: 31% 31% 31%;
-  font-weight: 500;
   gap: 10px;
 }
 
@@ -103,10 +102,17 @@ body {
   background-color: #00494d;
   padding: 0.5em 1em;
   border-radius: 0.25rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border: 1px thin #26c0ab;
+}
+
+.content .container .mini .calculator .grid .tip:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .content .container .mini .calculator .grid .tip:last-child {
-  font-weight: 700;
   color: #5e7a7d;
   background-color: #f4fafa;
 }
