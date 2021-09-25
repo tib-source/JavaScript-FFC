@@ -20,7 +20,7 @@
 
 
     .container{
-        width: 900px;
+        width: auto;
         background-color: $white;
         border-radius: 2em;
         color: $darkGrayishCyan;
@@ -109,9 +109,18 @@
 
                 .tip_amount{
                     display: grid;
-                    grid-template-columns: 35% 65%;
+                    grid-template-columns: 31% 69%;
                     gap: 1em;
 
+                    .text{
+                        display: flex;
+                        flex-direction: column;
+                        .bottom{
+                            font-weight: $large;
+                            font-size: toRem(14);
+                            color: $secondDarkGrayishCyan;
+                        }
+                    }
                     .calculated{
                         display: flex;
                         justify-content: flex-end;
@@ -130,8 +139,9 @@
                 background-color: $veryDarkcyan;
                 color: $lightGrayishCyan;
                 display: grid;
-                grid-template-rows:33% 33% 33%;
+                grid-template-rows:25% 25% 40%;
                 align-items: center;
+
                 .reseter{
                     align-self: end;
                 }
@@ -143,3 +153,23 @@
 
 }
 
+
+@media (max-width:toRem(800)){
+    html{
+        font-size: 70%;
+    }
+
+    .content{
+        .container{
+            width: 90%;
+            .mini{
+                width: 100%;
+                flex-direction: column;
+                
+                .calculator{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

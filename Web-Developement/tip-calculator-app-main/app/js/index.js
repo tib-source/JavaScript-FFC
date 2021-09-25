@@ -32,6 +32,9 @@ function tipCalculator(){
 }
 
 function customChange(field){
+    buttons.forEach((button)=>{
+        button.classList.remove("active")
+    })
     tipPercentage =  field.value
     tipCalculator()
 }
