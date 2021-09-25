@@ -4,7 +4,7 @@ const tipAmmount = document.querySelector("#tipTotal")
 const total = document.querySelector("#total")
 const buttons = Array.from(document.querySelectorAll(".tip"))
 
-let initialbill
+let initialbill = 0
 let tipPercentage = 0
 let people = 1
 
