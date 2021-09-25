@@ -54,7 +54,7 @@ body {
   background-color: #1b1938;
   border-radius: 0.5em;
   overflow: hidden;
-  width: 900px;
+  width: auto;
   margin: auto;
 }
 
@@ -80,7 +80,7 @@ body {
 .content .container__text {
   font-family: "Inter";
   font-weight: 400;
-  width: 90%;
+  width: 80%;
   margin-bottom: 1.875em;
 }
 
@@ -125,5 +125,34 @@ body {
   font-family: "Lexend Deca";
   font-weight: 400;
   letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 600px) {
+  .content .container {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+    font-size: 110%;
+  }
+  .content .container .img {
+    height: 20vh;
+  }
+  .content .container__info {
+    font-size: 80%;
+    padding: 1em 2em;
+  }
+  .content .container__text {
+    width: 100%;
+    font-size: 120%;
+  }
+  .content .container__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */

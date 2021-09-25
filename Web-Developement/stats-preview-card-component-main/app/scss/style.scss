@@ -35,18 +35,22 @@ body{
     }
 }
 
+
+
 .content{
     width: 100%;
     background-color: $veryDarkBlue;
     height: 100vh;
     flex-direction: column;
+
+
     .container{
         display: flex;
         color: $white;
         background-color: $darkDesaturatedBlue;
         border-radius: 0.5em;
         overflow: hidden;
-        width: 900px;
+        width: auto;
         margin: auto;
 
         .img{
@@ -71,7 +75,7 @@ body{
         &__text{
             font-family: "Inter";
             font-weight: 400 ;
-            width: 90%;
+            width: 80%;
             margin-bottom: toRem(30);
 
             p{
@@ -107,6 +111,34 @@ body{
                 font-family: "Lexend Deca";
                 font-weight: 400;
                 letter-spacing: 0.05em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .content{
+        .container{
+            width: 90%;
+            flex-direction: column-reverse ;
+            text-align: center;
+            font-size: 110%;
+
+            .img{
+                height: 20vh;
+            }
+
+            &__info{
+                font-size: 80%;
+                padding: 1em 2em;
+            }
+            &__text{
+                width: 100%;
+                font-size: 120%;
+
+            }
+            &__footer{
+                flex-direction: column;
             }
         }
     }
