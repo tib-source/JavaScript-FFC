@@ -31,9 +31,8 @@
             padding: 2em;
             .calculator{
                 width: 50%;
-                padding: 2em;
                 border-radius: 2em;
-                
+                padding: 0em 2em;
                 .input{
                     margin-top: 10px;
                     border-radius: 0.4rem;
@@ -55,6 +54,7 @@
                     margin-top: 1em;
                     grid-template-columns: 31% 31% 31%;
                     gap: 10px;
+                    margin-bottom: 2em;
                     .tip{
                         all:unset;
                         color: $secondLightGrayishCyan;
@@ -64,24 +64,33 @@
                         border-radius: 0.25rem;
                         transition: 0.4s;
                         border: 1px thin $strongCyan;
+                        font-size: toRem(20);
                     }
 
                     .tip:hover{
                         transform: scale(1.1);
                     }
                     .tip:last-child{
+                        font-size: toRem(16);
                         color:$darkGrayishCyan;
                         background-color: $secondLightGrayishCyan;
                     }
+
+                    .active{
+                        background-color: $strongCyan;
+                        color: $veryDarkcyan;
+                    }
+                }
+
+                .inital{
+                    margin-bottom: 2em;
                 }
             }
-            .calculator>*{
-                margin-bottom: 30px;
-            }
             .calculator:last-child{
+                padding: 2em;
                 background-color: $veryDarkcyan;
                 color: $lightGrayishCyan;
-        
+
             }
     
         }

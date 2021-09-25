@@ -24,25 +24,25 @@
             <span>Bill</span>
             <div class="input flex">
               <img src="./images/icon-dollar.svg" alt="dollar icon" class="icon">
-              <input class="num" type="number" value="0">
+              <input id="bill" class="num" type="number" oninput="bill_change(this)" placeholder="0">
             </div>
           </div>
           <div class="tip_value">
             <span>Select Tip %</span>
             <div class="grid">
-              <button class="tip">5% </button>
-              <button class="tip">10% </button>
-              <button class="tip">15% </button>
-              <button class="tip">25% </button>
-              <button class="tip">50% </button>
-              <input class="tip" placeholder="Custom" type="number" value="Custom" >
+              <button class="tip" id="tip1" onclick="turnActive(this.value,this.id)" value="5">5%</button>
+              <button class="tip" id="tip2" onclick="turnActive(this.value,this.id)" value="10">10%</button>
+              <button class="tip" id="tip5" onclick="turnActive(this.value,this.id)" value="15">15%</button>
+              <button class="tip" id="tip3" onclick="turnActive(this.value,this.id)" value="25">25%</button>
+              <button class="tip" id="tip4" onclick="turnActive(this.value,this.id)" value="50">50%</button>
+              <input class="tip"  id="custom" placeholder="Custom" type="number" oninput="customChange(this)" value="Custom" >
             </div>
           </div>
           <div class="inital">
             <span>Number of People</span>
             <div class="input flex">
               <img src="./images/icon-person.svg" alt="icon-person" class="icon">
-              <input class="num" type="number" value="0">
+              <input id="numPeople" class="num" type="number" oninput="num_people(this)" placeholder="0">
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
               <span class="bottom">/ person</span>
             </div>
             <div class="calculated">
-              <h1>$0.00</h1>
+              $<h1 id="tipTotal">0.00</h1>
             </div>
           </div>
           <div class="total">
@@ -62,7 +62,7 @@
               <span class="bottom">/ person</span>
             </div>
             <div class="calculated">
-              <h1>$0.00</h1>
+              $<h1 id="total">0.00</h1>
             </div>
           </div>
           <button onclick="reset()">Reset</button>

@@ -66,8 +66,8 @@ body {
 
 .content .container .mini .calculator {
   width: 50%;
-  padding: 2em;
   border-radius: 2em;
+  padding: 0em 2em;
 }
 
 .content .container .mini .calculator .input {
@@ -93,6 +93,7 @@ body {
   -ms-grid-columns: 31% 31% 31%;
       grid-template-columns: 31% 31% 31%;
   gap: 10px;
+  margin-bottom: 2em;
 }
 
 .content .container .mini .calculator .grid .tip {
@@ -105,6 +106,7 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border: 1px thin #26c0ab;
+  font-size: 1.25rem;
 }
 
 .content .container .mini .calculator .grid .tip:hover {
@@ -113,15 +115,22 @@ body {
 }
 
 .content .container .mini .calculator .grid .tip:last-child {
+  font-size: 1rem;
   color: #5e7a7d;
   background-color: #f4fafa;
 }
 
-.content .container .mini .calculator > * {
-  margin-bottom: 30px;
+.content .container .mini .calculator .grid .active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.content .container .mini .calculator .inital {
+  margin-bottom: 2em;
 }
 
 .content .container .mini .calculator:last-child {
+  padding: 2em;
   background-color: #00494d;
   color: #c5e4e7;
 }
