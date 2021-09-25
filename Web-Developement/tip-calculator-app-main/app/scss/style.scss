@@ -32,7 +32,10 @@
             .calculator{
                 width: 50%;
                 border-radius: 2em;
-                padding: 0em 2em;
+                padding-bottom: 1em;
+                padding-left: 1em;
+                padding-right: 2em;
+                padding-top: 2em;
                 .input{
                     margin-top: 10px;
                     border-radius: 0.4rem;
@@ -85,12 +88,53 @@
                 .inital{
                     margin-bottom: 2em;
                 }
+
+                .reset{
+                    width: 100%;    
+                    font-family: inherit;
+                    font-size: toRem(16);
+                    text-transform: uppercase;
+                    background-color: $strongCyan;
+                    color: $veryDarkcyan;
+                    font-weight: $large;
+                    border-radius: 0.4rem;
+                    padding: 0.5rem 0;
+                    border: none;
+                    transition: 0.4s ease;
+                }
+                .reset:hover{
+                    opacity: 0.8;
+                }
+
+
+                .tip_amount{
+                    display: grid;
+                    grid-template-columns: 35% 65%;
+                    gap: 1em;
+
+                    .calculated{
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-right: 1em;
+
+                        h1, h2{
+                            margin: 0;
+                            font-size: 40px;
+                            color: $strongCyan;
+                        }
+                    }
+                }
             }
             .calculator:last-child{
                 padding: 2em;
                 background-color: $veryDarkcyan;
                 color: $lightGrayishCyan;
-
+                display: grid;
+                grid-template-rows:33% 33% 33%;
+                align-items: center;
+                .reseter{
+                    align-self: end;
+                }
             }
     
         }
@@ -98,3 +142,4 @@
     }
 
 }
+

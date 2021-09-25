@@ -67,7 +67,10 @@ body {
 .content .container .mini .calculator {
   width: 50%;
   border-radius: 2em;
-  padding: 0em 2em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 2em;
+  padding-top: 2em;
 }
 
 .content .container .mini .calculator .input {
@@ -129,9 +132,65 @@ body {
   margin-bottom: 2em;
 }
 
+.content .container .mini .calculator .reset {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: #26c0ab;
+  color: #00494d;
+  font-weight: 700;
+  border-radius: 0.4rem;
+  padding: 0.5rem 0;
+  border: none;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.content .container .mini .calculator .reset:hover {
+  opacity: 0.8;
+}
+
+.content .container .mini .calculator .tip_amount {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% 65%;
+      grid-template-columns: 35% 65%;
+  gap: 1em;
+}
+
+.content .container .mini .calculator .tip_amount .calculated {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 1em;
+}
+
+.content .container .mini .calculator .tip_amount .calculated h1, .content .container .mini .calculator .tip_amount .calculated h2 {
+  margin: 0;
+  font-size: 40px;
+  color: #26c0ab;
+}
+
 .content .container .mini .calculator:last-child {
   padding: 2em;
   background-color: #00494d;
   color: #c5e4e7;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 33% 33% 33%;
+      grid-template-rows: 33% 33% 33%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .container .mini .calculator:last-child .reseter {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 /*# sourceMappingURL=style.css.map */
