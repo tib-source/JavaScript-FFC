@@ -163,13 +163,16 @@
   }
 
   .grid{
+    h1{
+      font-size: 150%;
+      margin: auto;
+    }
     .options{
       flex-direction: row;
       justify-content: space-evenly;
     }
-    .top, .bottom{ 
+    .top, .bottom{
       display: flex;
-      align-items: center;
       justify-content: space-between;
     }
   }

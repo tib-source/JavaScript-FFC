@@ -228,6 +228,10 @@ body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .grid h1 {
+    font-size: 150%;
+    margin: auto;
+  }
   .grid .options {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -241,9 +245,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
