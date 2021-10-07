@@ -14,16 +14,45 @@
 }
 
 .grid{ 
+  color: white;
   position: relative;
-
+  font-weight: 300;
+  display: flex;
+  align-items: flex-end;
   &:nth-child(1){
     padding: 0em;
+    display: block;
   }
 
+  .options{
+    padding: 1em;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+    justify-content: center;
+
+    a{
+      padding: 0.5em 0;
+      text-decoration: none;
+      color: $PaleBlue;
+      cursor: pointer;
+      opacity: 0.4;
+      transition: 0.3s ease-in-out;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+
+    .active{ 
+      opacity: 0.8;
+    }
+
+  }
   .background{
     height: 50%;
     width: 100%;
-    top: -20%;
+    top: 0%;
     background: $PaleBlue;
     z-index: -30;
     border-radius: 1em;
@@ -34,18 +63,19 @@
     padding-right:1em;
     img{
       width: auto;
-      height: 50px;  
-      opacity: 0.3;
+      height: auto;
+      opacity: 0.9;
 
     }
   }
   .content{
+    width: 100%;
     border-radius: 1em;
     background: $Darkblue;
     color: white;
     height: 80%;
     position: relative;
-    padding: 1em;
+    padding: 0 1em;
     z-index: 12023489;
   }
 
@@ -78,36 +108,22 @@
     }
 
 
-
-
   }
 
-
-  .options{
-    padding: 1em;
-    height: 30%;
+  .top{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-
-    a{
-      padding: 0.5em 0;
-      text-decoration: none;
-      color: $PaleBlue;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    img{
       cursor: pointer;
-      opacity: 0.4;
-      transition: 0.3s ease-in-out;
+      transition: 0.2s ease-in-out;
       &:hover{
-        opacity: 0.8;
+        opacity: 0.5;
       }
     }
-
-    .active{ 
-      opacity: 0.8;
-    }
-
   }
+
 }
 
 #two{ 
@@ -115,6 +131,12 @@
 }
 
 
+#orange {background-color:$Lightred ;} 
+#yellow {background-color: $Softorangecare;}
+#red{background-color: $Lightred2;}
+#green {background-color: $Limegreen;}
+#violet {background-color: $Violet;}
+#blue {background-color: $Softblue;}
 
 
 
