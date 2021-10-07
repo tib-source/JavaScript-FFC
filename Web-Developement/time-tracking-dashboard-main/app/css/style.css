@@ -39,15 +39,47 @@ body {
 }
 
 .grid {
-  padding: 1em;
-  border-radius: 1em;
-  background: #1c1f4a;
-  color: white;
   position: relative;
 }
 
 .grid:nth-child(1) {
   padding: 0em;
+}
+
+.grid .background {
+  height: 50%;
+  width: 100%;
+  top: -20%;
+  background: #bdc1ff;
+  z-index: -30;
+  border-radius: 1em;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 1em;
+}
+
+.grid .background img {
+  width: auto;
+  height: 50px;
+  opacity: 0.3;
+}
+
+.grid .content {
+  border-radius: 1em;
+  background: #1c1f4a;
+  color: white;
+  height: 80%;
+  position: relative;
+  padding: 1em;
+  z-index: 12023489;
 }
 
 .grid .profile {
@@ -80,7 +112,7 @@ body {
 }
 
 .grid .options {
-  padding: 1em 2em;
+  padding: 1em;
   height: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,6 +161,26 @@ body {
   .container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .grid .options {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .grid .top, .grid .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   #two {
     grid-row: span 2;
