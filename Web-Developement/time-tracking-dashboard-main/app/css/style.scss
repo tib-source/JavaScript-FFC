@@ -1,0 +1,38 @@
+@import 'globals'; 
+
+
+.container{
+  height: 500px;
+  width: 1180px;
+  border-radius: 1em;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+}
+
+.grid{ 
+  padding: 1em;
+  border-radius: 1em;
+  background: $Darkblue;
+  color: white;
+  position: relative;
+}
+
+#two{ 
+  grid-row: span 2;
+}
+
+
+
+@media (max-width: 1200px) {
+  .container{
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container{
+    
+  }
+}
