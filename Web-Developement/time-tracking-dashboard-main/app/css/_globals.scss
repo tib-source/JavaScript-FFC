@@ -1,0 +1,27 @@
+@import 'variables';
+
+* { 
+  box-sizing: border-box;
+}
+
+
+
+@function Rem($px){ 
+  @return ($px/16)*1em
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font: $font * 1px;
+  background-color: $Verydarkblue;
+}
+
+
