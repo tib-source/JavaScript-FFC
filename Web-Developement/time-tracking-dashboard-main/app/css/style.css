@@ -2,6 +2,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-weight: 300;
 }
 
 body {
@@ -53,6 +54,11 @@ body {
 .grid:nth-child(1) {
   padding: 0em;
   display: block;
+}
+
+.grid h1 {
+  font-size: 350%;
+  margin: 0.05em;
 }
 
 .grid .options {
@@ -118,9 +124,9 @@ body {
 }
 
 .grid .content {
+  background: #1c1f4a;
   width: 100%;
   border-radius: 1em;
-  background: #1c1f4a;
   color: white;
   height: 80%;
   position: relative;
@@ -146,6 +152,7 @@ body {
 .grid .profile h1 {
   margin: 0;
   font-weight: 300;
+  font-size: 250%;
 }
 
 .grid .profile img {
@@ -182,6 +189,8 @@ body {
 
 #two {
   grid-row: span 2;
+  background: #1c1f4a;
+  border-radius: 1em;
 }
 
 #orange {
