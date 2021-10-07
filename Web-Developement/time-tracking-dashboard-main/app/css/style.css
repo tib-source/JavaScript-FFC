@@ -23,13 +23,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font: 16px;
+  font-size: 18px;
   background-color: #0f1424;
 }
 
 .container {
   height: 500px;
-  width: 1180px;
+  width: 60%;
   border-radius: 1em;
   display: -ms-grid;
   display: grid;
@@ -46,6 +46,75 @@ body {
   position: relative;
 }
 
+.grid:nth-child(1) {
+  padding: 0em;
+}
+
+.grid .profile {
+  padding: 1em 2em;
+  background: #5847eb;
+  width: 100%;
+  height: 70%;
+  border-radius: 1em;
+}
+
+.grid .profile p {
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+  font-weight: 300;
+}
+
+.grid .profile h1 {
+  margin: 0;
+  font-weight: 300;
+}
+
+.grid .profile img {
+  margin: 0.5em 0 2em 0;
+  display: block;
+  width: 70px;
+  height: auto;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.grid .options {
+  padding: 1em 2em;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grid .options a {
+  padding: 0.5em 0;
+  text-decoration: none;
+  color: #bdc1ff;
+  cursor: pointer;
+  opacity: 0.4;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.grid .options a:hover {
+  opacity: 0.8;
+}
+
+.grid .options .active {
+  opacity: 0.8;
+}
+
 #two {
   grid-row: span 2;
 }
@@ -53,6 +122,16 @@ body {
 @media (max-width: 1200px) {
   .container {
     width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #two {
+    grid-row: span 2;
   }
 }
 /*# sourceMappingURL=style.css.map */
