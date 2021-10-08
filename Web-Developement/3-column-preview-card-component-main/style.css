@@ -19,18 +19,20 @@ body{
 
 
 .container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: Min(900px, 80%);
   height: 450px;
   background-color: red;
   border-radius: 0.5em;
-  overflow: hidden;
 }
 
 
 .card{ 
-
+  width: 33.3%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -63,9 +65,31 @@ body{
   color: hsla(0, 0%, 100%, 0.75);
   font-size: 15px;
 
+}
+
+
+.button{
+  background-color: red;
+  width: fit-content;
+  padding: 0.7em 2em;
+  border-radius: 2em;
+  background-color:  hsl(0, 0%, 95%);
+  font-family: 'Lexend Deca', sans-serif;
+  background-clip: text;
+
+}
 @media (max-width:600px) {
+
   .container{
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
+
+  .card{
+    width: 100%;
+    height: 600px;
+    justify-content: space-evenly;
+    padding: 4em 1em;
+  }
+  
 }
 
