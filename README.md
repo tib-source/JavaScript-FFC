@@ -6,6 +6,7 @@ All Websites / Designs Built So Far
 -----------Web Sites -----------
 - Sunny Side Landing Page - <a href='https://tib-source.github.io/Sunnyside-Agency-Landing-Page/'>Link</a>
 - Blogr Landing Page - <a href='https://tib-source.github.io/Blogr-landing-page/'>Link</a>
+- Calculator - <a href='https://tib-source.github.io/calculator-app-main/'>Link</a>
 
 ------- UI COMPONENTS ----------
 
