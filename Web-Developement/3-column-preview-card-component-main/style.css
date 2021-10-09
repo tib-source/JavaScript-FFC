@@ -24,7 +24,6 @@ body{
   justify-content: center;
   align-items: center;
   width: Min(900px, 80%);
-  height: 450px;
   background-color: red;
   border-radius: 0.5em;
 }
@@ -38,6 +37,8 @@ body{
   justify-content: space-around;
   background-color: blue;
   padding:2em;
+  height: 500px;
+
 
 }
 
