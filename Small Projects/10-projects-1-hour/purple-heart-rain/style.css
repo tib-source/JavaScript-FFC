@@ -5,6 +5,7 @@
 }
 
 body {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,5 +16,21 @@ body {
 
 div{
     position: fixed;
-    top: -1vh;
+    top: -10vh;
+    transform: translateY(0);
+    animation: fall 3s linear;
+}
+@keyframes fall {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    70%{
+        opacity: 1;
+    }
+
+    100%{ 
+        opacity: 0;
+        transform: translateY(105vh);
+    }
 }
