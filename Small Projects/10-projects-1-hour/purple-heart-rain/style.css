@@ -12,3 +12,8 @@ body {
     margin: 0;
     min-height: 100vh;
 }
+
+div{
+    position: fixed;
+    top: -1vh;
+}
